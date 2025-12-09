@@ -1,14 +1,14 @@
 # Site
-title: 我的二次元博客
+title: 我的二次元小窝
 subtitle: 高仿目标达成
-description: ''
+description: '这是一个基于 Hexo 的高仿二次元博客'
 keywords:
-author: John Doe
+author: 你的名字
 language: zh-CN
 timezone: ''
 
 # URL
-url: http://example.com
+url: https://my-blog-aa2.pages.dev
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -79,3 +79,43 @@ theme: liushen
 # Deployment
 deploy:
   type: ''
+
+# --- 主题特定高仿配置 ---
+theme_config:
+  # 导航栏
+  menu:
+    首页: / || fa-solid fa-home
+    归档: /archives/ || fa-solid fa-box-archive
+    清单: /lists/ || fa-solid fa-list-ul
+    友链: /link/ || fa-solid fa-link
+    关于: /about/ || fa-solid fa-user-circle
+    
+  # 网站图标与头像 (借用目标站资源预览)
+  favicon: https://blog.liushen.fun/info/avatar.ico
+  avatar:
+    img: https://blog.liushen.fun/info/avatar.ico
+    effect: true # 头像旋转效果
+
+  # 首页横幅与背景
+  index_img: https://blog.liushen.fun/config/img/default.webp
+  background: https://blog.liushen.fun/config/img/bg-light.webp
+  
+  # 侧边栏设置
+  aside:
+    enable: true
+    card_author: true
+    card_announcement: true
+    card_recent_post: true
+  
+  # 社交图标
+  social:
+    fa-brands fa-github: https://github.com/ || Github
+    fa-solid fa-envelope: mailto:test@email.com || Email
+    fa-brands fa-qq: http://wpa.qq.com/ || QQ
+
+  # 页脚
+  footer:
+    owner:
+      enable: true
+      since: 2025
+    custom_text: 高仿测试站点
