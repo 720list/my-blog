@@ -1,19 +1,20 @@
 # Site
 title: 我的二次元小窝
-# ---【关键修复】防止白屏的必填配置---
-algolia:
-  appId: ""
-  apiKey: ""
-  indexName: ""
-  chunkSize: 5000
-  fields: ""
-# ----------------------------------
 subtitle: 高仿目标达成
 description: '这是一个基于 Hexo 的高仿二次元博客'
 keywords:
 author: 站长
 language: zh-CN
 timezone: ''
+
+# --- 防止白屏的救命配置 (必须有) ---
+algolia:
+  appId: ""
+  apiKey: ""
+  indexName: ""
+  chunkSize: 5000
+  fields: ""
+# --------------------------------
 
 # URL
 url: https://my-blog-aa2.pages.dev
