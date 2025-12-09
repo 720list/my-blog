@@ -1,5 +1,13 @@
 # Site
 title: 我的二次元小窝
+# ---【关键修复】防止白屏的必填配置---
+algolia:
+  appId: ""
+  apiKey: ""
+  indexName: ""
+  chunkSize: 5000
+  fields: ""
+# ----------------------------------
 subtitle: 高仿目标达成
 description: '这是一个基于 Hexo 的高仿二次元博客'
 keywords:
@@ -80,22 +88,13 @@ theme: liushen
 deploy:
   type: ''
 
-# --- 关键修复：防止报错的空配置 ---
-algolia:
-  appId: ""
-  apiKey: ""
-  adminApiKey: ""
-  chunkSize: 5000
-  indexName: ""
-  fields: ""
-
-# --- 主题特定高仿配置 ---
+# --- 主题配置 ---
 theme_config:
   menu:
     首页: / || fa-solid fa-home
     归档: /archives/ || fa-solid fa-box-archive
   
-  # 必须开启本地搜索，否则会去调 Algolia 导致报错
+  # 必须开启本地搜索
   search:
     use: local_search
 
