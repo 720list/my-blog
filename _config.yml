@@ -7,14 +7,14 @@ author: 站长
 language: zh-CN
 timezone: ''
 
-# --- 关键配置 (已修复) ---
+# --- 必填：防止白屏的 Algolia 空配置 ---
 algolia:
   appId: ""
   apiKey: ""
   indexName: ""
   chunkSize: 5000
   fields: ""
-# -----------------------
+# ------------------------------------
 
 # URL
 url: https://my-blog-aa2.pages.dev
@@ -89,26 +89,43 @@ theme: liushen
 deploy:
   type: ''
 
-# --- 主题配置 ---
+# --- 主题详细配置 (修复白屏关键点) ---
 theme_config:
   menu:
     首页: / || fa-solid fa-home
     归档: /archives/ || fa-solid fa-box-archive
   
-  # 必须开启本地搜索
   search:
     use: local_search
 
+  # 网站图标与头像
   favicon: https://blog.liushen.fun/info/avatar.ico
   avatar:
     img: https://blog.liushen.fun/info/avatar.ico
     effect: true 
 
+  # 首页大图
   index_img: https://blog.liushen.fun/config/img/default.webp
   background: https://blog.liushen.fun/config/img/bg-light.webp
   
+  # --- 侧边栏 (这里是之前报错的地方) ---
   aside:
     enable: true
-    card_author: true
-    card_announcement: true
-    card_recent_post: true
+    # 作者卡片 (必须写成这样详细的结构)
+    card_author:
+      enable: true
+      description: "欢迎来到我的博客"
+      button:
+        enable: true
+        icon: fa-solid fa-envelope
+        text: 联系我
+        link: /
+    # 公告栏
+    card_announcement:
+      enable: true
+      content: "这是我的新博客！"
+    # 最近文章
+    card_recent_post:
+      enable: true
+      limit: 5
+      sort: date
