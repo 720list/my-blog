@@ -1,3 +1,10 @@
+algolia:
+  appId: ""
+  apiKey: ""
+  indexName: ""
+  chunkSize: 5000
+  fields: ""
+
 # Site
 title: 我的二次元小窝
 subtitle: 高仿目标达成
@@ -6,15 +13,6 @@ keywords:
 author: 站长
 language: zh-CN
 timezone: ''
-
-# --- 防止白屏的救命配置 (必须有) ---
-algolia:
-  appId: ""
-  apiKey: ""
-  indexName: ""
-  chunkSize: 5000
-  fields: ""
-# --------------------------------
 
 # URL
 url: https://my-blog-aa2.pages.dev
