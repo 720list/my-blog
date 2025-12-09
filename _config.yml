@@ -1,13 +1,12 @@
 # Site
 title: 我的二次元小窝
-subtitle: 高仿目标达成
-description: '这是一个基于 Hexo 的高仿二次元博客'
-keywords:
+subtitle: 网站建设中
+description: ''
 author: 站长
 language: zh-CN
 timezone: ''
 
-# --- 必填：防止白屏的 Algolia 空配置 ---
+# --- 关键：Algolia 占位（双重保险） ---
 algolia:
   appId: ""
   apiKey: ""
@@ -19,7 +18,6 @@ algolia:
 # URL
 url: https://my-blog-aa2.pages.dev
 permalink: :year/:month/:day/:title/
-permalink_defaults:
 pretty_urls:
   trailing_index: true
   trailing_html: true
@@ -89,7 +87,7 @@ theme: liushen
 deploy:
   type: ''
 
-# --- 主题详细配置 (修复白屏关键点) ---
+# --- 主题配置 (安全模式) ---
 theme_config:
   menu:
     首页: / || fa-solid fa-home
@@ -98,34 +96,12 @@ theme_config:
   search:
     use: local_search
 
-  # 网站图标与头像
-  favicon: https://blog.liushen.fun/info/avatar.ico
-  avatar:
-    img: https://blog.liushen.fun/info/avatar.ico
-    effect: true 
-
-  # 首页大图
-  index_img: https://blog.liushen.fun/config/img/default.webp
-  background: https://blog.liushen.fun/config/img/bg-light.webp
-  
-  # --- 侧边栏 (这里是之前报错的地方) ---
+  # 暂时关掉侧边栏的作者卡片，防止报错
   aside:
     enable: true
-    # 作者卡片 (必须写成这样详细的结构)
     card_author:
-      enable: true
-      description: "欢迎来到我的博客"
-      button:
-        enable: true
-        icon: fa-solid fa-envelope
-        text: 联系我
-        link: /
-    # 公告栏
+      enable: false 
     card_announcement:
-      enable: true
-      content: "这是我的新博客！"
-    # 最近文章
+      enable: false
     card_recent_post:
       enable: true
-      limit: 5
-      sort: date
